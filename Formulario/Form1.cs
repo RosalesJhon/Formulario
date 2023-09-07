@@ -30,7 +30,9 @@ namespace Formulario
 
         private void button3_Click(object sender, EventArgs e)
 
-        {
+        {   
+            //OCULTAR LOGIN
+
             this.Hide();
             FormCrear formCrear = new FormCrear();
 

@@ -32,12 +32,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.input_nm = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.input_ape = new System.Windows.Forms.TextBox();
+            this.input_pw1 = new System.Windows.Forms.TextBox();
+            this.input_email = new System.Windows.Forms.TextBox();
+            this.input_pw2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -73,13 +73,13 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Nombres";
             // 
-            // textBox1
+            // input_nm
             // 
-            this.textBox1.Location = new System.Drawing.Point(449, 101);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(296, 31);
-            this.textBox1.TabIndex = 3;
+            this.input_nm.Location = new System.Drawing.Point(449, 101);
+            this.input_nm.Multiline = true;
+            this.input_nm.Name = "input_nm";
+            this.input_nm.Size = new System.Drawing.Size(296, 31);
+            this.input_nm.TabIndex = 3;
             // 
             // label3
             // 
@@ -91,37 +91,37 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Apellidos";
             // 
-            // textBox2
+            // input_ape
             // 
-            this.textBox2.Location = new System.Drawing.Point(449, 172);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(296, 31);
-            this.textBox2.TabIndex = 5;
+            this.input_ape.Location = new System.Drawing.Point(449, 172);
+            this.input_ape.Multiline = true;
+            this.input_ape.Name = "input_ape";
+            this.input_ape.Size = new System.Drawing.Size(296, 31);
+            this.input_ape.TabIndex = 5;
             // 
-            // textBox3
+            // input_pw1
             // 
-            this.textBox3.Location = new System.Drawing.Point(449, 316);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(296, 31);
-            this.textBox3.TabIndex = 6;
+            this.input_pw1.Location = new System.Drawing.Point(449, 316);
+            this.input_pw1.Multiline = true;
+            this.input_pw1.Name = "input_pw1";
+            this.input_pw1.Size = new System.Drawing.Size(296, 31);
+            this.input_pw1.TabIndex = 6;
             // 
-            // textBox4
+            // input_email
             // 
-            this.textBox4.Location = new System.Drawing.Point(449, 244);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(296, 31);
-            this.textBox4.TabIndex = 7;
+            this.input_email.Location = new System.Drawing.Point(449, 244);
+            this.input_email.Multiline = true;
+            this.input_email.Name = "input_email";
+            this.input_email.Size = new System.Drawing.Size(296, 31);
+            this.input_email.TabIndex = 7;
             // 
-            // textBox5
+            // input_pw2
             // 
-            this.textBox5.Location = new System.Drawing.Point(449, 392);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(296, 31);
-            this.textBox5.TabIndex = 8;
+            this.input_pw2.Location = new System.Drawing.Point(449, 392);
+            this.input_pw2.Multiline = true;
+            this.input_pw2.Name = "input_pw2";
+            this.input_pw2.Size = new System.Drawing.Size(296, 31);
+            this.input_pw2.TabIndex = 8;
             // 
             // label4
             // 
@@ -165,6 +165,7 @@
             this.button1.TabIndex = 12;
             this.button1.Text = "Crear";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormCrear
             // 
@@ -175,12 +176,12 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.input_pw2);
+            this.Controls.Add(this.input_email);
+            this.Controls.Add(this.input_pw1);
+            this.Controls.Add(this.input_ape);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.input_nm);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -197,12 +198,12 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox input_nm;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox input_ape;
+        private System.Windows.Forms.TextBox input_pw1;
+        private System.Windows.Forms.TextBox input_email;
+        private System.Windows.Forms.TextBox input_pw2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
