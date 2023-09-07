@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Formulario.Capa1;
 
 namespace Formulario
 {
@@ -28,10 +29,16 @@ namespace Formulario
         }
 
         private void button3_Click(object sender, EventArgs e)
-        {
 
+        {
+            this.Hide();
+            FormCrear formCrear = new FormCrear();
+
+            // Mostrar el form
+            formCrear.Show();
         }
 
+        //Inicio
         private void Form1_Load(object sender, EventArgs e)
         {
             this.StartPosition = FormStartPosition.CenterScreen;;
