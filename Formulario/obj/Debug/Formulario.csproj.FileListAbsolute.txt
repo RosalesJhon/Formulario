@@ -10,3 +10,5 @@ C:\Horario\Formulario\Formulario\obj\Debug\Formulario.exe
 C:\Horario\Formulario\Formulario\obj\Debug\Formulario.pdb
 C:\Horario\Formulario\Formulario\obj\Debug\Formulario.Capa1.FormCrear.resources
 C:\Horario\Formulario\Formulario\obj\Debug\Formulario.Capa1.Restablecer.resources
+C:\Horario\Formulario\Formulario\obj\Debug\Formulario.Capa1.Principal.resources
+C:\Horario\Formulario\Formulario\obj\Debug\Formulario.Capa1.PanelAdmin.resources

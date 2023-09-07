@@ -87,6 +87,7 @@
             this.input_pwd.Name = "input_pwd";
             this.input_pwd.Size = new System.Drawing.Size(259, 36);
             this.input_pwd.TabIndex = 5;
+            this.input_pwd.TextChanged += new System.EventHandler(this.input_pwd_TextChanged);
             // 
             // label4
             // 

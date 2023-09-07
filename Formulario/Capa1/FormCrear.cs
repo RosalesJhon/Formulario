@@ -18,6 +18,11 @@ namespace Formulario.Capa1
         public FormCrear()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen; ;
+            this.MaximizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            //título de la ventana
+            this.Text = "Crear cuenta";
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -120,6 +125,17 @@ namespace Formulario.Capa1
             {
                 MessageBox.Show("Error en la conexión a la base de datos.");
             }
+        }
+
+        private void input_pw1_TextChanged(object sender, EventArgs e)
+        {
+            input_pw1.PasswordChar = '*';
+        }
+
+        private void input_pw2_TextChanged(object sender, EventArgs e)
+        {
+            input_pw2.PasswordChar = '*';
+
         }
     }
 }

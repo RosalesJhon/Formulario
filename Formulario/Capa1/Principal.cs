@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Formulario;
 
 namespace Formulario.Capa1
 {
@@ -15,6 +16,30 @@ namespace Formulario.Capa1
         public Principal()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen; ;
+            this.MaximizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            //título de la ventana
+            this.Text = "Pagina Principal";
+        }
+
+        private void Principal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            MessageBox.Show("Hasta pronto");
+            this.Close();  
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 login = new Form1();
+            login.Show();
         }
     }
 }

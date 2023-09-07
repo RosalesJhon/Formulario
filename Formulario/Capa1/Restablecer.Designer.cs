@@ -155,6 +155,7 @@
             this.input_pwd.Name = "input_pwd";
             this.input_pwd.Size = new System.Drawing.Size(356, 32);
             this.input_pwd.TabIndex = 11;
+            this.input_pwd.TextChanged += new System.EventHandler(this.input_pwd_TextChanged);
             // 
             // Restablecer
             // 

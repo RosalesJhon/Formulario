@@ -109,6 +109,7 @@
             this.input_pw1.Name = "input_pw1";
             this.input_pw1.Size = new System.Drawing.Size(296, 31);
             this.input_pw1.TabIndex = 6;
+            this.input_pw1.TextChanged += new System.EventHandler(this.input_pw1_TextChanged);
             // 
             // input_email
             // 
@@ -127,6 +128,7 @@
             this.input_pw2.Name = "input_pw2";
             this.input_pw2.Size = new System.Drawing.Size(296, 31);
             this.input_pw2.TabIndex = 8;
+            this.input_pw2.TextChanged += new System.EventHandler(this.input_pw2_TextChanged);
             // 
             // label4
             // 

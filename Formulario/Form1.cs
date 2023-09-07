@@ -11,6 +11,11 @@ namespace Formulario
         public Form1()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen; ;
+            this.MaximizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            //título de la ventana
+            this.Text = "Acceso a cuenta";
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -42,11 +47,7 @@ namespace Formulario
         //Inicio
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.StartPosition = FormStartPosition.CenterScreen;;
-            this.MaximizeBox = false;
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
-            //título de la ventana
-            this.Text = "Acceso a cuenta";
+          
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -57,48 +58,66 @@ namespace Formulario
             Conexion conexion = new Conexion();
 
             SqlConnection conn = conexion.ObtenerConexion();
-
-            if (conn != null)
+            if (email == "Admin" && pwd == "Admin")
             {
-                try
-                {
-                    string query = "SELECT * FROM DatosL WHERE Correo = @Correo AND Contraseña = @Password";
-
-                    using (SqlCommand command = new SqlCommand(query, conn))
-                    {
-                        command.Parameters.AddWithValue("@Correo", email);
-                        command.Parameters.AddWithValue("@Password", pwd);
-
-                        // Ejecutar consulta
-                        SqlDataReader reader = command.ExecuteReader();
-
-                        if (reader.HasRows)
-                        {
-                            MessageBox.Show("Inicio de sesión exitoso.");
-                        }
-                        else
-                        {
-                            MessageBox.Show("Correo o contraseña incorrectos.");
-                        }
-
-                        reader.Close();
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al buscar datos: " + ex.Message);
-                }
-                finally
-                {
-                    // Cerrar la conexión
-                    conn.Close();
-                }
+                MessageBox.Show("Usuario Administrador");
+                this.Hide();
+                PanelAdmin panel = new PanelAdmin();
+                panel.Show();
             }
             else
             {
-                MessageBox.Show("Error en la conexión a la base de datos.");
-            }
 
+                if (conn != null)
+                {
+                    try
+                    {
+                        string query = "SELECT * FROM DatosL WHERE Correo = @Correo AND Contraseña = @Password";
+
+                        using (SqlCommand command = new SqlCommand(query, conn))
+                        {
+                            command.Parameters.AddWithValue("@Correo", email);
+                            command.Parameters.AddWithValue("@Password", pwd);
+
+                            // Ejecutar consulta
+                            SqlDataReader reader = command.ExecuteReader();
+
+                            if (reader.HasRows)
+                            {
+                                MessageBox.Show("Inicio de sesión exitoso.");
+                                this.Hide();
+                                Principal framep = new Principal();
+                                framep.Show();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Correo o contraseña incorrectos.");
+                            }
+
+                            reader.Close();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al buscar datos: " + ex.Message);
+                    }
+                    finally
+                    {
+                        // Cerrar la conexión
+                        conn.Close();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Error en la conexión a la base de datos.");
+                }
+            }
         }
+
+        private void input_pwd_TextChanged(object sender, EventArgs e)
+        {
+            input_pwd.PasswordChar = '*';
+        }
+
     }
 }

@@ -11,6 +11,11 @@ namespace Formulario.Capa1
         public Restablecer()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen; ;
+            this.MaximizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            //título de la ventana
+            this.Text = "Restablecer Contraseña";
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -121,6 +126,11 @@ namespace Formulario.Capa1
         {
 
             GenerarNuevoCaptcha();
+        }
+
+        private void input_pwd_TextChanged(object sender, EventArgs e)
+        {
+            input_pwd.PasswordChar = '*';
         }
     }
 }
