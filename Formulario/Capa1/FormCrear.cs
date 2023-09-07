@@ -76,7 +76,7 @@ namespace Formulario.Capa1
                 try
                 {
                     // Consulta SQL insert
-                    string query = "INSERT INTO Datos (nombre,apellido,correo,contraseña) VALUES (@Nombre, @Apellido, @Correo, @Password)";
+                    string query = "INSERT INTO DatosL (nombre,apellido,correo,contraseña) VALUES (@Nombre, @Apellido, @Correo, @Password)";
 
                     using (SqlCommand command = new SqlCommand(query, conn))
                     {

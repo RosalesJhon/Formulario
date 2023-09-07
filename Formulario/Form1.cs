@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Formulario.Capa1;
 
@@ -64,7 +58,7 @@ namespace Formulario
             {
                 try
                 {
-                    string query = "SELECT * FROM Datos Correo = @Correo AND Contraseña = @pwd";
+                    string query = "SELECT * FROM DatosL WHERE Correo = @Correo AND Contraseña = @Password";
 
                     using (SqlCommand command = new SqlCommand(query, conn))
                     {
@@ -76,13 +70,10 @@ namespace Formulario
 
                         if (reader.HasRows)
                         {
-                            // Los datos coinciden, usuario autenticado
                             MessageBox.Show("Inicio de sesión exitoso.");
-                            // Puedes realizar acciones adicionales después de la autenticación
                         }
                         else
                         {
-                            // No se encontraron datos que coincidan
                             MessageBox.Show("Correo o contraseña incorrectos.");
                         }
 

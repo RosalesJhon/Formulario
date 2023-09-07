@@ -75,6 +75,7 @@
             // 
             // input_nm
             // 
+            this.input_nm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.input_nm.Location = new System.Drawing.Point(449, 101);
             this.input_nm.Multiline = true;
             this.input_nm.Name = "input_nm";
@@ -93,6 +94,7 @@
             // 
             // input_ape
             // 
+            this.input_ape.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.input_ape.Location = new System.Drawing.Point(449, 172);
             this.input_ape.Multiline = true;
             this.input_ape.Name = "input_ape";
@@ -101,6 +103,7 @@
             // 
             // input_pw1
             // 
+            this.input_pw1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.input_pw1.Location = new System.Drawing.Point(449, 316);
             this.input_pw1.Multiline = true;
             this.input_pw1.Name = "input_pw1";
@@ -109,6 +112,7 @@
             // 
             // input_email
             // 
+            this.input_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.input_email.Location = new System.Drawing.Point(449, 244);
             this.input_email.Multiline = true;
             this.input_email.Name = "input_email";
@@ -117,6 +121,7 @@
             // 
             // input_pw2
             // 
+            this.input_pw2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.input_pw2.Location = new System.Drawing.Point(449, 392);
             this.input_pw2.Multiline = true;
             this.input_pw2.Name = "input_pw2";
