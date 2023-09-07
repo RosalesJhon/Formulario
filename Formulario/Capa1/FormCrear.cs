@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using Formulario;
 
 namespace Formulario.Capa1
 {
@@ -45,68 +46,78 @@ namespace Formulario.Capa1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string servidor = "DESKTOP-2QR1BR7\\SQLEXPRESS";
-            string bd = "Login";
-            string usuario = "DESKTOP-2QR1BR7\\Equipo";
-
-            //string connectionString = $"Data Source={servidor};Initial Catalog={bd};Integrated Security=True;User ID={usuario}";
-            //SqlConnection conn = new SqlConnection(connectionString);
-
-            //try
-            //{
-            //    conn.Open();
-            //    MessageBox.Show("Conectado con la base de datos");
-
-            //    string email2 = email;
-            //    string pwd2 = pwd;
-
-            //    // Consulta SQL para insertar datos
-            //    string query = "INSERT INTO Login (nombre, contra) VALUES (@Email, @Password)";
-
-            //    using (SqlCommand command = new SqlCommand(query, conn))
-            //    {
-            //        // Parametros para evitar la inyección de SQL
-            //        command.Parameters.AddWithValue("@Email", email2);
-            //        command.Parameters.AddWithValue("@Password", pwd2);
-
-            //        // Ejecutar la consulta
-            //        int rowsAffected = command.ExecuteNonQuery();
-
-            //        if (rowsAffected > 0)
-            //        {
-            //            Console.WriteLine("Datos insertados correctamente.");
-            //        }
-            //        else
-            //        {
-            //            Console.WriteLine("No se pudo insertar datos.");
-            //        }
-            //    }
-
-            //}
-            //catch (SqlException ex)
-            //{
-            //    MessageBox.Show("Fallo en la conexión: " + ex.ToString());
-            //}
-            //finally
-            //{
-            //    if (conn != null && conn.State == ConnectionState.Open)
-            //    {
-            //        conn.Close();
-            //    }
-            //}
+            // Obtener datos de los textbox
             string nombre = input_nm.Text;
             string apellido = input_ape.Text;
             string correo = input_email.Text;
             string pwd1 = input_pw1.Text;
             string pwd2 = input_pw2.Text;
 
-            if (pwd1 == pwd2)
+            //verificar campos
+            if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(apellido) || string.IsNullOrEmpty(correo) || string.IsNullOrEmpty(pwd1) || string.IsNullOrEmpty(pwd2))
             {
-
+                MessageBox.Show("Por favor, complete todos los campos.");
+                return;
             }
 
-            // Puedes hacer lo que quieras con los datos, por ejemplo, mostrarlos en un MessageBox
-            MessageBox.Show("Nombre: " + nombre + "\nApellido: " + apellido);
+            if (pwd1 != pwd2)
+            {
+                MessageBox.Show("Las contraseñas no coinciden.");
+                return; //si las contraseñas no coinciden
+            }
+
+            // instancia de conexión
+            Conexion conexion = new Conexion();
+
+            SqlConnection conn = conexion.ObtenerConexion();
+
+            if (conn != null)
+            {
+                try
+                {
+                    // Consulta SQL insert
+                    string query = "INSERT INTO Datos (nombre,apellido,correo,contraseña) VALUES (@Nombre, @Apellido, @Correo, @Password)";
+
+                    using (SqlCommand command = new SqlCommand(query, conn))
+                    {
+                        // Parametros para evitar inyecciones sql
+                        command.Parameters.AddWithValue("@Nombre", nombre);
+                        command.Parameters.AddWithValue("@Apellido", apellido);
+                        command.Parameters.AddWithValue("@Correo", correo);
+                        command.Parameters.AddWithValue("@Password", pwd1);
+
+                        // Ejecutar consulta
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Usuario creado correctamente");
+                            this.Hide();
+                            Form1 login = new Form1();
+
+                            login.Close();
+                            
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se pudo crear usuario");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al insertar datos: " + ex.Message);
+                }
+                finally
+                {
+                    // Cerrar la conexión
+                    conn.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Error en la conexión a la base de datos.");
+            }
         }
     }
 }

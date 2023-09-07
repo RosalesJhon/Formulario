@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Capa1\Conexion.cs" />
     <Compile Include="Capa1\FormCrear.cs">
       <SubType>Form</SubType>
     </Compile>
