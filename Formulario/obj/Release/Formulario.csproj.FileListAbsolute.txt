@@ -1,0 +1,12 @@
+C:\Horario\Formulario\Formulario\bin\Release\Formulario.exe.config
+C:\Horario\Formulario\Formulario\bin\Release\Formulario.exe
+C:\Horario\Formulario\Formulario\bin\Release\Formulario.pdb
+C:\Horario\Formulario\Formulario\obj\Release\Formulario.csproj.AssemblyReference.cache
+C:\Horario\Formulario\Formulario\obj\Release\Formulario.Capa1.FormCrear.resources
+C:\Horario\Formulario\Formulario\obj\Release\Formulario.Capa1.Restablecer.resources
+C:\Horario\Formulario\Formulario\obj\Release\Formulario.Form1.resources
+C:\Horario\Formulario\Formulario\obj\Release\Formulario.Properties.Resources.resources
+C:\Horario\Formulario\Formulario\obj\Release\Formulario.csproj.GenerateResource.cache
+C:\Horario\Formulario\Formulario\obj\Release\Formulario.csproj.CoreCompileInputs.cache
+C:\Horario\Formulario\Formulario\obj\Release\Formulario.exe
+C:\Horario\Formulario\Formulario\obj\Release\Formulario.pdb

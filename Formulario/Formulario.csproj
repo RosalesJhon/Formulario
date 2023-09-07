@@ -53,6 +53,12 @@
     <Compile Include="Capa1\FormCrear.Designer.cs">
       <DependentUpon>FormCrear.cs</DependentUpon>
     </Compile>
+    <Compile Include="Capa1\Restablecer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Capa1\Restablecer.Designer.cs">
+      <DependentUpon>Restablecer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Capa1\FormCrear.resx">
       <DependentUpon>FormCrear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Capa1\Restablecer.resx">
+      <DependentUpon>Restablecer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
