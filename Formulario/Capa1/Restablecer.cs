@@ -101,7 +101,7 @@ namespace Formulario.Capa1
                             }
                             else
                             {
-                                MessageBox.Show("No se pudo crear usuario");
+                                MessageBox.Show("No se pudo cambiar contraseña");
                             }
                         }
                     }

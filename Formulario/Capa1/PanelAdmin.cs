@@ -11,6 +11,12 @@ namespace Formulario.Capa1
         public PanelAdmin()
         {
             InitializeComponent();
+
+            this.StartPosition = FormStartPosition.CenterScreen; ;
+            this.MaximizeBox = false;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            //título de la ventana
+            this.Text = "Panel admin";
         }
         private void button1_Click(object sender, EventArgs e)
         {

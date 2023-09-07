@@ -55,9 +55,6 @@ namespace Formulario
             string email = input_email.Text;
             string pwd = input_pwd.Text;
 
-            Conexion conexion = new Conexion();
-
-            SqlConnection conn = conexion.ObtenerConexion();
             if (email == "Admin" && pwd == "Admin")
             {
                 MessageBox.Show("Usuario Administrador");
@@ -67,6 +64,8 @@ namespace Formulario
             }
             else
             {
+                Conexion conexion = new Conexion();
+                SqlConnection conn = conexion.ObtenerConexion();
 
                 if (conn != null)
                 {
