@@ -92,10 +92,12 @@ namespace Formulario.Capa1
                         if (rowsAffected > 0)
                         {
                             MessageBox.Show("Usuario creado correctamente");
-                            this.Hide();
-                            Form1 login = new Form1();
 
-                            login.Close();
+                            this.Hide();
+                            //FormCrear cerrar = new FormCrear();
+                            //cerrar.
+                            Form1 login = new Form1();
+                            login.Show();
                             
                         }
                         else
