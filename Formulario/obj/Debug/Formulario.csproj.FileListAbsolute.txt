@@ -1,0 +1,11 @@
+C:\Horario\Formulario\Formulario\bin\Debug\Formulario.exe.config
+C:\Horario\Formulario\Formulario\bin\Debug\Formulario.exe
+C:\Horario\Formulario\Formulario\bin\Debug\Formulario.pdb
+C:\Horario\Formulario\Formulario\obj\Debug\Formulario.csproj.AssemblyReference.cache
+C:\Horario\Formulario\Formulario\obj\Debug\Formulario.Capa1.Form1.resources
+C:\Horario\Formulario\Formulario\obj\Debug\Formulario.Form1.resources
+C:\Horario\Formulario\Formulario\obj\Debug\Formulario.Properties.Resources.resources
+C:\Horario\Formulario\Formulario\obj\Debug\Formulario.csproj.GenerateResource.cache
+C:\Horario\Formulario\Formulario\obj\Debug\Formulario.csproj.CoreCompileInputs.cache
+C:\Horario\Formulario\Formulario\obj\Debug\Formulario.exe
+C:\Horario\Formulario\Formulario\obj\Debug\Formulario.pdb
