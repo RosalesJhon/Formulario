@@ -78,6 +78,8 @@
             this.input_email.Name = "input_email";
             this.input_email.Size = new System.Drawing.Size(259, 36);
             this.input_email.TabIndex = 4;
+            this.input_email.TextChanged += new System.EventHandler(this.input_email_TextChanged);
+            this.input_email.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.input_email_KeyPress);
             // 
             // input_pwd
             // 

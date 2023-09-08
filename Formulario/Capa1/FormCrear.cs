@@ -137,5 +137,17 @@ namespace Formulario.Capa1
             input_pw2.PasswordChar = '*';
 
         }
+
+        private void input_email_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void input_email_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != '@' && e.KeyChar != '.' && e.KeyChar != '_' && e.KeyChar != '-')
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
